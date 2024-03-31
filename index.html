@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ramadan Schedule Table</title>
+    <link rel="stylesheet" href="/assets/css/liveclock.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <div class="bgimg">
+      <img src="/assets/ramadan_lantern.png" alt="">
+    </div>
+    <div class="container">
+      <div class="aside">
+        <div class="sidetext-inner">
+          <h3>রমজান ১৪৪৫ হিজরি</h3>
+          <h1>
+            সেহরি ও <br> ইফতারের <br>
+            সময়সূচি ২০২৪
+          </h1>
+          <nav role="navigation" class="primary-navigation">
+            <ul>
+              <li>
+                <button id="mainBtn" class="Mainbtn">ঢাকা জেলা
+                  <svg width="35px" height="35px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0" fill="none" width="24" height="24"/>              
+                    <g>
+                    <path d="M7 10l5 5 5-5"/>
+                    </g>
+                  </svg>
+                </button>
+                <ul class="dropdown">
+                  <li><button id="dhakaBtn" onclick="updateTableAndButton('ঢাকা', ramadanScheduleDhaka)">ঢাকা</button></li>
+                  <li><button id="chittagongBtn" onclick="updateTableAndButton('চট্টগ্রাম', ramadanScheduleChittagong)">চট্টগ্রাম</button></li>
+                  <li><button id="barisalBtn" onclick="updateTableAndButton('বরিশাল', ramadanScheduleBarisal)">বরিশাল</button></li>
+                  <li><button id="khulnaBtn" onclick="updateTableAndButton('খুলনা', ramadanScheduleKhulna)">খুলনা</button></li>
+                  <li><button id="rajshahiBtn" onclick="updateTableAndButton('রাজশাহী', ramadanScheduleRajshahi)">রাজশাহী</button></li>
+                  <li><button id="rangpurBtn" onclick="updateTableAndButton('রংপুর', ramadanScheduleRangpur)">রংপুর</button></li>
+                  <li><button id="mymensinghBtn" onclick="updateTableAndButton('ময়মনসিংহ', ramadanScheduleMymensingh)">ময়মনসিংহ</button></li>
+                  <li><button id="sylhetBtn" onclick="updateTableAndButton('সিলেট', ramadanScheduleSylhet)">সিলেট</button></li>
+              </ul>
+              
+              </li>
+            </ul>
+          </nav>
+          
+          
+
+          <!-- LIVE TIME CLOCK START -->
+            <div class="livetimer">
+              <div class="wrapper">
+              <div class="time">
+                <div class="left-side">
+                <span class="hour">00</span>
+              </div>
+              <div class="right-side">
+                <span id="dots">:</span>
+                <span class="minutes">01</span>
+              </div>
+              <div class="right-down">
+                <span class="period">PM</span>
+                <span class="second">00</span>
+              </div>
+            </div>
+          </div>
+          <div class="box first"></div>
+          <div class="box seconds"></div>
+        </div>
+          <!-- LIVE TIME CLOCK END -->
+
+        </div>
+      </div>
+      <!-- TABLE SECTION  -->
+      <div class="table-div">
+        <div id="table-container"></div>
+      </div>
+    </div>
+
+    <script src="assets/js/liveclock.js"></script>
+    <script src="assets/js/location.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

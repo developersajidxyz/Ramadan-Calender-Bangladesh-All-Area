@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wrapper,
+.time,
+.left-side,
+.right-side,
+.right-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.livetimer {
+    margin-top: 200px;
+    position: relative;
+}
+.text{
+  position: absolute;
+  top: 30%;
+  color: #fff;
+  font-size: 1em;
+  background: rgba(0, 0, 0, 0.01);
+  padding: 10px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(15px);
+  border-radius: 5px;
+  transition: .4s ease;
+  display: none;
+}
+.text:hover{
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.time {
+  height: 100px;
+  max-width: 230px;
+  width: 230px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  position: fixed;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+  -webkit-filter: drop-shadow(-5px 0 10px rgba(0, 0, 0, 7));
+  filter: drop-shadow(-5px 0 10px rgba(0, 0, 0, 7));
+}
+
+.left-side,
+.right-side,
+.right-down {
+  position: relative;
+}
+
+.right-side {
+  margin: 0;
+}
+
+.hour {
+  font-size: 4.6em;
+  font-weight: 700;
+  padding: 0 10px;
+  color: transparent;
+  background: -webkit-gradient(linear, left bottom, left top, from(blue), color-stop(80%, white));
+  background: -o-linear-gradient(bottom, #2e868e, white 80%);
+  background: linear-gradient(-360deg, #2e868e, white 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  letter-spacing: -2px;
+  -webkit-transform: translateX(-6px);
+  -ms-transform: translateX(-6px);
+  transform: translateX(-6px);
+  margin-left: -10px;
+}
+
+#dots {
+  font-size: 2.5em;
+  color: #9A9A9A;
+  font-weight: 400;
+  position: absolute;
+  bottom: -14px;
+  left: -6px;
+}
+
+.minutes {
+  position: absolute;
+  left: -8px;
+  bottom: -12px;
+  margin-left: 20px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  font-size: 2.4em;
+  color: transparent;
+  margin-left: 20px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#C34A00), color-stop(70%, #FFFAED));
+  background: -o-linear-gradient(bottom, #C34A00, #FFFAED 70%);
+  background: linear-gradient(360deg, #C34A00, #FFFAED 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.right-down {
+  margin-top: 1.7em;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.period {
+  color: orange;
+  margin-left: -8px;
+  font-size: .9em;
+}
+
+.second {
+  margin-left: 6px;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#0F3CFF), to(#7A9DFF));
+  background: -o-linear-gradient(bottom, #0F3CFF, #7A9DFF);
+  background: linear-gradient(to top, #0F3CFF, #7A9DFF);
+  z-index: -1;
+}
+
+.first:nth-child(2) {
+  -webkit-transform: translate(26%, -20px);
+  -ms-transform: translate(26%, -20px);
+  transform: translate(26%, -20px);
+
+  -webkit-animation: swing2 6s linear infinite alternate;
+
+  animation: swing2 6s linear infinite alternate;
+}
+
+.seconds {
+  background: -webkit-gradient(linear, left bottom, right top, from(#DC25FB), to(#E968FF));
+  background: -o-linear-gradient(bottom left, #DC25FB, #E968FF);
+  background: linear-gradient(to top right, #DC25FB, #E968FF);
+  -webkit-transform: translate(-8em, -70px);
+  -ms-transform: translate(-8em, -70px);
+  transform: translate(-8em, -70px);
+  -webkit-animation: swing 6s linear infinite alternate;
+  animation: swing 6s linear infinite alternate;
+}
+
+@-webkit-keyframes swing2 {
+  100% {
+    -webkit-transform: translate(29%, -26px) scale(1.1);
+    transform: translate(29%, -26px) scale(1.1);
+  }
+}
+
+@keyframes swing2 {
+  100% {
+    -webkit-transform: translate(29%, -26px) scale(1.1);
+    transform: translate(29%, -26px) scale(1.1);
+  }
+}
+
+@-webkit-keyframes swing {
+  100% {
+    -webkit-transform: translate(-8.5em, -64px) scale(1.1);
+    transform: translate(-8.5em, -64px) scale(1.1);
+  }
+}
+
+@keyframes swing {
+  100% {
+    -webkit-transform: translate(-8.5em, -64px) scale(1.1);
+    transform: translate(-8.5em, -64px) scale(1.1);
+  }
+}
+
+@media screen and (min-width: 669px) {
+  .text{
+    font-size: 1.5em;
+    top: 40%;
+  }
+}
